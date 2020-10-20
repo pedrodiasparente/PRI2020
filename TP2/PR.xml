@@ -33,18 +33,18 @@
         <paragrafo>
             <texto>Bla bla bla, a seguinte parte vai ser em </texto>
             <bold>BOLD, e agora vai ser </bold>
-            <italico>italico tuuuc </italico>
+            <italico>italic text </italico>
             <texto>:) , agora um pequeno </texto>
             <internalLink url="www.google.pt">
                 internal link
             </internalLink>
             <texto> e agora um </texto>
             <externalLink url="www.youtube.com">
-                external link mano
+                external link
             </externalLink>
         </paragrafo>
         <paragrafo>
-            <texto>E agora mano, que fazer?</texto>
+            <texto>Paragrafo numero 2</texto>
         </paragrafo>
     </abstract>
     <deliverables>

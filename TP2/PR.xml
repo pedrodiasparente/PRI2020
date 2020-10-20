@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "file:/home/pedro/Desktop/PRI/PR.dtd">
+<PR>
+    <keyName>
+        PRI_TP1_ProjectRec
+    </keyName>
+    <titulo>
+        Project Record TP1 PRI
+    </titulo>
+    <subtitulo>
+        Random Subtitle
+    </subtitulo>
+    <beginDate>
+        Outubro 2020
+    </beginDate>
+    <endDate>
+        Outubro 2020
+    </endDate>
+    <supervisor url="www.di.uminho.pt/~jcr">
+        José Carlos Ramalho
+    </supervisor>
+    <workteam>
+        <worker numero="A85919" mailURL="a85919@alunos.uminho.pt">
+            <nome>
+                Pedro Dias Parente
+            </nome>
+            <email>
+                a85919@alunos.uminho.pt
+            </email>
+        </worker>
+    </workteam>
+    <abstract>
+        <paragrafo>
+            <texto>Bla bla bla, a seguinte parte vai ser em </texto>
+            <bold>BOLD, e agora vai ser </bold>
+            <italico>italico tuuuc </italico>
+            <texto>:) , agora um pequeno </texto>
+            <internalLink url="www.google.pt">
+                internal link
+            </internalLink>
+            <texto> e agora um </texto>
+            <externalLink url="www.youtube.com">
+                external link mano
+            </externalLink>
+        </paragrafo>
+        <paragrafo>
+            <texto>E agora mano, que fazer?</texto>
+        </paragrafo>
+    </abstract>
+    <deliverables>
+        <item url="www.facebook.com">
+            Report (XML Version)
+        </item>
+    </deliverables>
+</PR>

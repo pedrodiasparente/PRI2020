@@ -22,11 +22,12 @@
 
 <!ELEMENT abstract (paragrafo)+ >
 
-<!ELEMENT paragrafo (texto|bold|italico|externalLink|internalLink)* >
+<!ELEMENT paragrafo (texto|bold|italico|sublinhado|externalLink|internalLink)* >
 
 <!ELEMENT texto (#PCDATA) >
 <!ELEMENT bold (#PCDATA) >
 <!ELEMENT italico (#PCDATA) >
+<!ELEMENT sublinhado (#PCDATA) >
 
 <!ELEMENT externalLink (#PCDATA) >
 <!ATTLIST externalLink 

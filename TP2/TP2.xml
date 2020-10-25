@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE PR SYSTEM "file:/home/pedro/Desktop/PRI/PR.dtd">
+<!DOCTYPE PR SYSTEM "file:/home/pedro/Desktop/PRI/TPCS/TP2/PR.dtd">
 <PR>
     <keyName>
         PRI_TP1_ProjectRec
@@ -33,6 +33,7 @@
         <paragrafo>
             <texto>Bla bla bla, a seguinte parte vai ser em </texto>
             <bold>BOLD, e agora vai ser </bold>
+            <sublinhado> sublinhado e de seguida </sublinhado>
             <italico>italic text </italico>
             <texto>:) , agora um pequeno </texto>
             <internalLink url="www.google.pt">

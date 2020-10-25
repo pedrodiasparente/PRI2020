@@ -20,7 +20,7 @@
         José Carlos Ramalho
     </supervisor>
     <workteam>
-        <worker numero="A85919" mailURL="a85919@alunos.uminho.pt">
+        <worker numero="A85919" mailURL="mailto:a85919@alunos.uminho.pt">
             <nome>
                 Pedro Dias Parente
             </nome>
@@ -49,7 +49,10 @@
         </paragrafo>
     </abstract>
     <deliverables>
-        <item url="www.facebook.com">
+        <item ref="TP2.html">
+            Report (HTML Version)
+        </item>
+        <item ref="TP2.xml">
             Report (XML Version)
         </item>
     </deliverables>

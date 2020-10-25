@@ -39,4 +39,4 @@
 <!ELEMENT deliverables (item)+ >
 <!ELEMENT item (#PCDATA) >
 <!ATTLIST item
-    url CDATA #REQUIRED >
+    ref CDATA #REQUIRED >

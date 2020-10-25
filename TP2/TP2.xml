@@ -31,21 +31,25 @@
     </workteam>
     <abstract>
         <paragrafo>
-            <texto>Bla bla bla, a seguinte parte vai ser em </texto>
-            <bold>BOLD, e agora vai ser </bold>
-            <sublinhado> sublinhado e de seguida </sublinhado>
-            <italico>italic text </italico>
-            <texto>:) , agora um pequeno </texto>
-            <internalLink url="www.google.pt">
-                internal link
-            </internalLink>
-            <texto> e agora um </texto>
-            <externalLink url="www.youtube.com">
-                external link
-            </externalLink>
+            <texto>
+                Para este trabalho, foi contruído pelo aluno um ficheiro 
+            </texto>
+            <bold> dtd </bold>
+            <texto>
+                que fosse capaz de gerar
+            </texto>
+            <bold> xml </bold>
+            <texto>
+                de acordo com as caraterísticas de um 
+            </texto>
+            <bold>
+                Project Record.
+            </bold>
         </paragrafo>
         <paragrafo>
-            <texto>Paragrafo numero 2</texto>
+            <texto>
+                Depois de gerado o xml foi tambem usado o ficheiro gerado para fazer o próprio Project Record.
+            </texto>
         </paragrafo>
     </abstract>
     <deliverables>

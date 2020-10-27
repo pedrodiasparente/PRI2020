@@ -5,7 +5,7 @@
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
     
     <xsl:template match="/">
-        <xsl:result-document href="arqsite/index.html">
+        <xsl:result-document href="multi-page/arqsite/index.html">
             <html>
                 <head>
                     <title>ARQSITS Website</title>
@@ -37,7 +37,7 @@
     
     <xsl:template match="ARQELEM">
         
-        <xsl:result-document href="arqsite/{generate-id()}.html">
+        <xsl:result-document href="multi-page/arqsite/{generate-id()}.html">
             <html>
                 <head>
                     <title><xsl:value-of select="IDENTI"/></title>

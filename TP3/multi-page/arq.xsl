@@ -9,9 +9,10 @@
             <html>
                 <head>
                     <title>ARQSITS Website</title>
+                    <link rel="stylesheet" type="text/css" href="css/arq-index.css"/>
                 </head>
                 <body>
-                    <h2>Indice</h2>
+                    <h2><indice>Indice</indice></h2>
                     <xsl:apply-templates mode="indice" select="//ARQELEM">
                         <xsl:sort select="IDENTI"/>
                     </xsl:apply-templates>
@@ -27,7 +28,7 @@
         <li>
             <a name="i{generate-id()}"/>
             <a href="{generate-id()}.html">
-                <xsl:value-of select="IDENTI"/>
+                <identi><xsl:value-of select="IDENTI"/></identi>
             </a>
         </li>
     </xsl:template>
@@ -41,13 +42,14 @@
             <html>
                 <head>
                     <title><xsl:value-of select="IDENTI"/></title>
+                    <link rel="stylesheet" type="text/css" href="css/arq-node.css"/>
                 </head>
                 <body>
-                    <p><b>IDENTIFICAÇÃO</b> : <xsl:value-of select="IDENTI"/></p>
-                    <p><b>AUTOR</b> : <xsl:value-of select="AUTOR"/></p>
-                    <p><b>DATA</b> : <xsl:value-of select="DATA"/></p>
+                    <p><b>IDENTIFICAÇÃO</b> : <identi><xsl:value-of select="IDENTI"/></identi></p>
+                    <p><b>AUTOR</b> : <autor><xsl:value-of select="AUTOR"/></autor></p>
+                    <p><b>DATA</b> : <data><xsl:value-of select="DATA"/></data></p>
                     <a href="index.html#i{generate-id()}">
-                        <h3><b>VOLTAR AO INDICE</b></h3>
+                        <h3><b><indice>VOLTAR AO INDICE</indice></b></h3>
                     </a>
                 </body>
             </html>

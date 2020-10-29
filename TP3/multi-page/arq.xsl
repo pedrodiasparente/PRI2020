@@ -10,9 +10,13 @@
                 <head>
                     <title>ARQSITS Website</title>
                     <link rel="stylesheet" type="text/css" href="css/arq-index.css"/>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter"/>
                 </head>
                 <body>
-                    <h2><indice>Indice</indice></h2>
+                    <div class="align">
+                        <indice>Indice</indice>
+                    </div>
+                    <hr/>
                     <xsl:apply-templates mode="indice" select="//ARQELEM">
                         <xsl:sort select="IDENTI"/>
                     </xsl:apply-templates>

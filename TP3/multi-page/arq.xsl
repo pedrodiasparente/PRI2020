@@ -14,7 +14,7 @@
                 </head>
                 <body>
                     <div class="align">
-                        <indice>Indice</indice>
+                        <indice>INDICE</indice>
                     </div>
                     <hr/>
                     <xsl:apply-templates mode="indice" select="//ARQELEM">
@@ -47,13 +47,17 @@
                 <head>
                     <title><xsl:value-of select="IDENTI"/></title>
                     <link rel="stylesheet" type="text/css" href="css/arq-node.css"/>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter"/>
                 </head>
                 <body>
                     <p><b>IDENTIFICAÇÃO</b> : <identi><xsl:value-of select="IDENTI"/></identi></p>
                     <p><b>AUTOR</b> : <autor><xsl:value-of select="AUTOR"/></autor></p>
                     <p><b>DATA</b> : <data><xsl:value-of select="DATA"/></data></p>
+                    <p><b>DESCRIÇÃO</b> : <descricao><xsl:value-of select="DESARQ"/></descricao></p>
                     <a href="index.html#i{generate-id()}">
-                        <h3><b><indice>VOLTAR AO INDICE</indice></b></h3>
+                        <div class="align">
+                            <h3><b><indice>VOLTAR AO INDICE</indice></b></h3>
+                        </div>
                     </a>
                 </body>
             </html>

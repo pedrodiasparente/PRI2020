@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "file:/home/pedro/Desktop/PRI/TPCS/TP2/PR.dtd">
+<PR>
+    <keyName>
+        PRI_TP3_ProjectRec
+    </keyName>
+    <titulo>
+        Project Record TP3 PRI
+    </titulo>
+    <beginDate>
+        Outubro 2020
+    </beginDate>
+    <endDate>
+        Outubro 2020
+    </endDate>
+    <supervisor url="www.di.uminho.pt/~jcr">
+        José Carlos Ramalho
+    </supervisor>
+    <workteam>
+        <worker numero="A85919" mailURL="mailto:a85919@alunos.uminho.pt">
+            <nome>
+                Pedro Dias Parente
+            </nome>
+            <email>
+                a85919@alunos.uminho.pt
+            </email>
+        </worker>
+    </workteam>
+    <abstract>
+        <paragrafo>
+            <texto>
+                Para este trabalho, foi contruído pelo aluno um site usando ficheiros xsl que usam ficheiros .xml como input.
+            </texto>
+        </paragrafo>
+        <paragrafo>
+            <texto>
+                Foi gerado então html de acordo com as especificações do ficheiro .xsl. O aluno decidiu fazer dois sites, um em formato 
+            </texto>
+            <bold>
+                single-page
+            </bold>
+            <texto> e outro em formato </texto>
+            <bold>
+                multi-page.
+            </bold>
+        </paragrafo>
+        <paragrafo>
+            <texto>
+                Foi ainda feito css para o site estar mais "amigável" aos olhos.
+            </texto>
+        </paragrafo>
+    </abstract>
+    <deliverables>
+        <item ref="arq.xml">
+            Ficheiro xml de input
+        </item>
+        <item ref="arq.dtd">
+            Ficheiro dtd que contém a sintaxe do ficheiro xml de input
+        </item>
+        <item ref="single-page/arq.xsl">
+            Ficheiro .xsl do site em formato single-page
+        </item>
+        <item ref="single-page/arq.html">
+            Página .html do site em formato single-page
+        </item>
+        <item ref="multi-page/arq.xsl">
+            Ficheiro .xsl do site em formato multi-page
+        </item>
+        <item ref="multi-page/arqsite/index.html">
+            Página .html do site em formato multi-page
+        </item>
+    </deliverables>
+</PR>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "../../Random/PR.dtd">
+<PR>
+    <meta>
+        <key>PRI_TP4_ProjectRec</key>
+        <title>Project Record TP4 PRI</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85919">
+            <name>Pedro Dias Parente</name>
+            <email>a85919@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Com os novos conhecimentos adquiridos de <b>node</b> foi nos pedido que fizessemos um site que use o dataset 
+            fornecido (arq.xml) para construir uma página <i>html</i> (index.html) com links que fazem calls ao servidor 
+            para redirecionar para as outras páginas <i>html</i> que por sua vez também foram criadas através do dataset.
+        </p>
+        <p>
+            Essas páginas <i>html</i> contém informação mais detalhada de cada arqueosítio contido no dataset original.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="TP4.xml">
+            Report (XML)
+        </link>
+        <link url="arq.xml">
+            Dataset dos Arqueosítios
+        </link>
+        <link url="arq.xsl">
+            Ficheiro .xsl
+        </link>
+        <link url="server.js">
+            Código referente ao servidor
+        </link>
+        <link url="arqsite/index.html">
+            Index do site construído
+        </link>
+    </deliverables>
+</PR>

@@ -25,14 +25,15 @@ var servidor = http.createServer(function (req, res) {
             axios.get('http://localhost:3000/alunos?_page=' + page + '&_limit=' + limit)
                 .then(resp => {
                     alunos = resp.data;
+                    var last = resp.headers.link.match(/page=[0-9]+&_limit=[0-9]+>; rel="last"$/)[0].split("page=")[1].split("&")[0]
                     res.write('<h2>LISTA DE ALUNOS</h2>')
                     res.write('<ul>')
                     alunos.forEach(a => {
                         res.write('<a href="http://localhost:3001/alunos/' + a.id + '"><li>ID: ' + a.id + ' NOME: ' + a.nome + '</li></a>')
                     });
                     res.write('</ul>')
-                    res.write('<a href="http://localhost:3001/alunos?_page=' + (page - 1) + '&_limit=' + limit + '"><p>Previous</p></a>')
-                    res.write('<a href="http://localhost:3001/alunos?_page=' + (page + 1) + '&_limit=' + limit + '"><p>Next</p></a>')
+                    if(page != 1) res.write('<a href="http://localhost:3001/alunos?_page=' + (page - 1) + '&_limit=' + limit + '"><p>Previous</p></a>')
+                    if(page != last) res.write('<a href="http://localhost:3001/alunos?_page=' + (page + 1) + '&_limit=' + limit + '"><p>Next</p></a>')
                     res.write('<a href="http://localhost:3001"><h2>VOLTAR AO INICIO</h2></a>')
                     res.end()
                 })

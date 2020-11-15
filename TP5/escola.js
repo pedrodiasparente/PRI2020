@@ -10,17 +10,19 @@ var servidor = http.createServer(function (req, res) {
             })
             res.write('<h2>Escola de Música</h2>')
             res.write('<ul>')
-            res.write('<li><a href="http://localhost:3001/alunos">LISTA DE ALUNOS</a></li>')
+            res.write('<li><a href="http://localhost:3001/alunos?_page=1&_limit=30">LISTA DE ALUNOS</a></li>')
             res.write('<li><a href="http://localhost:3001/cursos">LISTA DE CURSOS</a></li>')
             res.write('<li><a href="http://localhost:3001/instrumentos">LISTA DE INSTRUMENTOS</a></li>')
             res.write('</ul>')
             res.end()
         }
-        else if(req.url == '/alunos'){
+        else if (req.url.match(/\/alunos\?_page=.*/)){
+            var page = parseInt(req.url.split('=')[1].split('&')[0])
+            var limit = parseInt(req.url.split('=')[2])
             res.writeHead(200, {
                 "Content-Type": "text/html; charset=utf-8"
             })
-            axios.get('http://localhost:3000/alunos')
+            axios.get('http://localhost:3000/alunos?_page=' + page + '&_limit=' + limit)
                 .then(resp => {
                     alunos = resp.data;
                     res.write('<h2>LISTA DE ALUNOS</h2>')
@@ -29,6 +31,8 @@ var servidor = http.createServer(function (req, res) {
                         res.write('<a href="http://localhost:3001/alunos/' + a.id + '"><li>ID: ' + a.id + ' NOME: ' + a.nome + '</li></a>')
                     });
                     res.write('</ul>')
+                    res.write('<a href="http://localhost:3001/alunos?_page=' + (page - 1) + '&_limit=' + limit + '"><p>Previous</p></a>')
+                    res.write('<a href="http://localhost:3001/alunos?_page=' + (page + 1) + '&_limit=' + limit + '"><p>Next</p></a>')
                     res.write('<a href="http://localhost:3001"><h2>VOLTAR AO INICIO</h2></a>')
                     res.end()
                 })
@@ -53,7 +57,7 @@ var servidor = http.createServer(function (req, res) {
                     res.write('<p>CURSO: ' + aluno.curso + '</p>')
                     res.write('<p>ANO DO CURSO: ' + aluno.anoCurso + '</p>')
                     res.write('<p>INSTRUMENTO: ' + aluno.instrumento + '</p>')
-                    res.write('<a href="http://localhost:3001/alunos"><h2>VOLTAR AO INDICE</h2></a>')
+                    res.write('<a href="http://localhost:3001/alunos?_page=1&_limit=30"><h2>VOLTAR AO INDICE</h2></a>')
                     res.end()
                 })
                 .catch(error => {

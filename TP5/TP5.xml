@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "../../Random/PR.dtd">
+<PR>
+    <meta>
+        <key>PRI_TP5_ProjectRec</key>
+        <title>Project Record TP5 PRI</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85919">
+            <name>Pedro Dias Parente</name>
+            <email>a85919@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            O objetivo deste trabalho era fazer um server em <b>Node.js</b> que, através de uma api em JSON server,
+            fosse capaz de ir buscar um dataset em formato <i>JSON</i> e gerar paǵinas html com essa informação.
+        </p>
+        <p>
+            O dataset era referente a Alunos, os cursos onde andavam e os intrumentos que tocavam.
+            Foi ainda implementado um sistema de paginação para os alunos.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="TP5.xml">
+            Report (XML)
+        </link>
+        <link url="escola.js">
+            Código referente ao servidor
+        </link>
+    </deliverables>
+</PR>

@@ -1,16 +1,60 @@
 {
   "tarefas": [
     {
-      "descricao": "cozinhar",
+      "descricao": "limpar o quarto",
       "responsavel": "josé joão",
-      "data-limite": "2020-11-30",
+      "datalimite": "2020-11-27",
+      "resolvido": false,
+      "cancelado": false,
       "id": 1
     },
     {
-      "descricao": "limpar o quarto",
-      "responsavel": "pedro parente",
-      "data-limite": "2021-01-14",
+      "descricao": "lavar a casa de banho",
+      "responsavel": "josé joão",
+      "datalimite": "2020-11-30",
+      "resolvido": false,
+      "cancelado": false,
       "id": 2
+    },
+    {
+      "descricao": "cozinhar",
+      "responsavel": "pedro parente",
+      "datalimite": "2020-11-27",
+      "resolvido": false,
+      "cancelado": false,
+      "id": 3
+    },
+    {
+      "descricao": "aspirar a casa",
+      "responsavel": "alberta",
+      "datalimite": "2020-11-27",
+      "resolvido": false,
+      "cancelado": false,
+      "id": 4
+    },
+    {
+      "descricao": "Arrumar a cozinha",
+      "responsavel": "francisco trincao",
+      "datalimite": "2020-12-02",
+      "resolvido": false,
+      "cancelado": false,
+      "id": 5
+    },
+    {
+      "descricao": "passar a roupa",
+      "responsavel": "alberta",
+      "datalimite": "2020-11-30",
+      "resolvido": false,
+      "cancelado": false,
+      "id": 6
+    },
+    {
+      "descricao": "lavar a roupa",
+      "responsavel": "antonio",
+      "datalimite": "2020-12-02",
+      "resolvido": false,
+      "cancelado": false,
+      "id": 7
     }
   ]
 }

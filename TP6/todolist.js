@@ -72,7 +72,8 @@ function geraListaTarefas(tarefas){
                 </tr>
   `
     tarefas.forEach(t => {
-        pagHTML += `
+        if(t.resolvido == false && t.cancelado == false){
+            pagHTML += `
             <tr>
                 <td>${t.datalimite}</td>
                 <td>${t.responsavel}</td>
@@ -90,10 +91,35 @@ function geraListaTarefas(tarefas){
                 </td>
             </tr>
         `
+        }  
     })
 
     pagHTML+= `
         </table>
+    `
+    return pagHTML
+}
+
+function geraTarefasDone(tarefas){
+    let pagHTML = `
+        <header class="w3-container w3-teal">
+            <h1>Lista de Tarefas Resolvidas/Canceladas</h1>
+        </header>
+
+        <ul>
+    `
+
+    tarefas.forEach(t=> {
+        if (t.resolvido) pagHTML+=`
+                <li>${t.descricao} foi resolvido</li>
+        `
+        else if (t.cancelado) pagHTML+=`
+                <li>${t.descricao} foi cancelado</li>
+        `
+    })
+
+    pagHTML+= `
+        </ul>
     </body>
     </html>
     `
@@ -119,11 +145,22 @@ var server = http.createServer(function (req,res) {
                             res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
                             res.write(geraFormNovaTarefa())
                             res.write(geraListaTarefas(tarefas))
-                            res.end()
+                            axios.get("http://localhost:3000/tarefas?_sort=resolvido&_order=desc")
+                                .then(resp => {
+                                    var tarefasR = resp.data
+
+                                    res.write(geraTarefasDone(tarefasR))
+                                    res.end()
+                                })
+                                .catch(function (erro) {
+                                    res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                                    res.write("<p>Não foi possível obter a lista de tarefas...")
+                                    res.end()
+                                })
                         })
                         .catch(function (erro) {
                             res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
-                            res.write("<p>Não foi possível obter a lista de alunos...")
+                            res.write("<p>Não foi possível obter a lista de tarefas...")
                             res.end()
                         })
                 }
@@ -150,11 +187,24 @@ var server = http.createServer(function (req,res) {
                                             res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
                                             res.write(geraFormNovaTarefa())
                                             res.write(geraListaTarefas(tarefas))
-                                            res.end()
+
+
+                                            axios.get("http://localhost:3000/tarefas?_sort=resolvido&_order=desc")
+                                                .then(response => {
+                                                    var tarefasR = response.data
+
+                                                    res.write(geraTarefasDone(tarefasR))
+                                                    res.end()
+                                                })
+                                                .catch(function (erro) {
+                                                    res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                                                    res.write("<p>Não foi possível obter a lista de tarefas...")
+                                                    res.end()
+                                                })
                                         })
                                         .catch(function (erro) {
                                             res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
-                                            res.write("<p>Não foi possível obter a lista de alunos...")
+                                            res.write("<p>Não foi possível obter a lista de tarefas...")
                                             res.end()
                                         })
                                 })
@@ -166,8 +216,65 @@ var server = http.createServer(function (req,res) {
                                 })
                         }
                         else{
-                            console.log(info.id)
-                            console.log(info.estado)
+                            axios.get("http://localhost:3000/tarefas")
+                                .then(response => {
+                                    var tarefas = response.data
+                                    var rState = false
+                                    var cState = false
+                                    if(info.estado == "Resolvido") rState = true
+                                    else if(info.estado == "Cancelado") cState = true
+                                    else {}
+
+                                    tarefas.forEach(t => {
+                                        if(t.id == info.id) {
+                                            axios.put('http://localhost:3000/tarefas/' + info.id, {
+                                                "descricao": t.descricao,
+                                                "responsavel": t.responsavel,
+                                                "datalimite": t.datalimite,
+                                                "resolvido": rState,
+                                                "cancelado": cState,
+                                                "id": t.id
+                                            }).then(resp => {
+                                                console.log(resp.data);
+                                            })
+                                                .catch(error => {
+                                                    console.log("ERRO: " + error)
+                                                });
+                                        }
+                                    })
+
+                                    axios.get("http://localhost:3000/tarefas?_sort=datalimite,responsavel&_order=asc,asc")
+                                        .then(response => {
+                                            var tarefas = response.data
+
+                                            res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                                            res.write(geraFormNovaTarefa())
+                                            res.write(geraListaTarefas(tarefas))
+                                            axios.get("http://localhost:3000/tarefas?_sort=resolvido&_order=desc")
+                                                .then(resp => {
+                                                    var tarefasR = resp.data
+
+                                                    res.write(geraTarefasDone(tarefasR))
+                                                    res.end()
+                                                })
+                                                .catch(function (erro) {
+                                                    res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                                                    res.write("<p>Não foi possível obter a lista de tarefas...")
+                                                    res.end()
+                                                })
+                                        })
+                                        .catch(function (erro) {
+                                            res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                                            res.write("<p>Não foi possível obter a lista de tarefas...")
+                                            res.end()
+                                        })
+
+                                })
+                                .catch(function (erro) {
+                                    res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                                    res.write("<p>Não foi possível obter a lista de tarefas...")
+                                    res.end()
+                                })
                         }
                         
                     })

@@ -12,7 +12,7 @@
       "descricao": "lavar a casa de banho",
       "responsavel": "josé joão",
       "datalimite": "2020-11-30",
-      "resolvido": false,
+      "resolvido": true,
       "cancelado": false,
       "id": 2
     },
@@ -20,7 +20,7 @@
       "descricao": "cozinhar",
       "responsavel": "pedro parente",
       "datalimite": "2020-11-27",
-      "resolvido": false,
+      "resolvido": true,
       "cancelado": false,
       "id": 3
     },
@@ -49,11 +49,11 @@
       "id": 6
     },
     {
-      "descricao": "lavar a roupa",
-      "responsavel": "antonio",
-      "datalimite": "2020-12-02",
+      "descricao": "passear os caes",
+      "responsavel": "jcr",
+      "datalimite": "2021-03-10",
       "resolvido": false,
-      "cancelado": false,
+      "cancelado": true,
       "id": 7
     }
   ]

@@ -1,0 +1,16 @@
+{
+  "tarefas": [
+    {
+      "descricao": "cozinhar",
+      "responsavel": "josé joão",
+      "data-limite": "2020-11-30",
+      "id": 1
+    },
+    {
+      "descricao": "limpar o quarto",
+      "responsavel": "pedro parente",
+      "data-limite": "2021-01-14",
+      "id": 2
+    }
+  ]
+}

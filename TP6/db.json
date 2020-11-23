@@ -37,7 +37,7 @@
       "responsavel": "francisco trincao",
       "datalimite": "2020-12-02",
       "resolvido": false,
-      "cancelado": false,
+      "cancelado": true,
       "id": 5
     },
     {

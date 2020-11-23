@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "../../Random/PR.dtd">
+<PR>
+    <meta>
+        <key>PRI_TP6_ProjectRec</key>
+        <title>Project Record TP6 PRI</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85919">
+            <name>Pedro Dias Parente</name>
+            <email>a85919@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            O objetivo deste trabalho era fazer um server em <b>Node.js</b> que, através de uma api em JSON server,
+            fosse capaz de gerar um site em formato single-page buscando a informação do ficheiro <b>db.json</b>.
+        </p>
+        <p>
+            O site é uma todo list simples com a funcionalidade de: inserir novas tarefas, ver as tarefas atuais pendentes e 
+            ainda marcar as tarefas atuais como resolvidas ou canceladas.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="TP6.xml">
+            Report (XML)
+        </link>
+        <link url="todolist.js">
+            Código referente ao servidor
+        </link>
+        <link url="static.js">
+            Código fornecido pelo professor relativamente ao tratamento de recursos estáticos
+        </link>
+        <link url="db.json">
+            Base de dados em formato .json
+        </link>
+    </deliverables>
+</PR>

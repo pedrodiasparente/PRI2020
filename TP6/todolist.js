@@ -13,7 +13,6 @@ function recuperaInfo(request, callback) {
             body += bloco.toString()
         })
         request.on('end', () => {
-            console.log(body)
             callback(parse(body))
         })
     }
@@ -177,7 +176,6 @@ var server = http.createServer(function (req,res) {
                         if (info.descricao != null){
                             info.resolvido = false
                             info.cancelado = false
-                            console.log('POST de tarefa: ' + JSON.stringify(info))
                             axios.post('http://localhost:3000/tarefas', info)
                                 .then(resp => {
                                     axios.get("http://localhost:3000/tarefas?_sort=datalimite,responsavel&_order=asc,asc")
@@ -235,7 +233,6 @@ var server = http.createServer(function (req,res) {
                                                 "cancelado": cState,
                                                 "id": t.id
                                             }).then(resp => {
-                                                console.log(resp.data);
                                             })
                                                 .catch(error => {
                                                     console.log("ERRO: " + error)

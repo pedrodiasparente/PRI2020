@@ -3,9 +3,11 @@ extends layout
 block content
     .w3-card-4
         header.w3-container.w3-green
+            form(method="get" action="/alunos").w3-right
+                button(type="submit").w3-dark-gray.w3-xlarge Voltar à lista de alunos
             h2=title
         h3 Preencha os seguintes campos:
-        form(method="post" action="/registo").w3-margin-left
+        form(method="post" action="/alunos").w3-margin-left
             div.input
                 span.label Nome
                 input(type="text", name="nome")
@@ -15,5 +17,6 @@ block content
             div.input
                 span.label Git
                 input(type="text", name="git")
+            //tpc
             div.actions
                 input(type="submit", value="Registar")

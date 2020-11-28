@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .w3-card-4
+      header.w3.container.w3-green
+          form(method="get" action="/alunos/editar").w3-left
+            input(type="hidden", name="numero", value=aluno.Número)
+            button(type="submit").w3-dark-gray.w3-xlarge Editar Aluno
+          form(method="get" action="/alunos").w3-right
+            button(type="submit").w3-dark-gray.w3-xlarge Voltar à lista de alunos
+          h2.w3-center= title 
+      //info do aluno nao esquecer tpc
+      p= aluno.Nome  
+      footer(class="w3-container w3-green")
+          adress Gerado por Pedro Parente

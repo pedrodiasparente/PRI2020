@@ -25,3 +25,7 @@ module.exports.update = a => {
         doc.save()
     });
 }
+
+module.exports.delete = id => {
+    return Aluno.remove({ Número: id})
+}

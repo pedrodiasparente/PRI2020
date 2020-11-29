@@ -10,6 +10,10 @@ block content
             button(type="submit").w3-dark-gray.w3-xlarge Voltar à lista de alunos
           h2.w3-center= title 
       //info do aluno nao esquecer tpc
-      p= aluno.Nome  
+      p= aluno.Nome
+      header.w3.container.w3-green
+          form(method="post" action="/alunos/" + aluno.Número).w3-red.w3-center
+            button(type="submit").w3-black.w3-xlarge Eliminar Aluno
+      
       footer(class="w3-container w3-green")
           adress Gerado por Pedro Parente

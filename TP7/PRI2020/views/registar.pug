@@ -17,6 +17,17 @@ block content
             div.input
                 span.label Git
                 input(type="text", name="git")
-            //tpc
+            div.input
+                span.label TPCS
+                select(name="quant")
+                    option(value=[]) 0 TPCS
+                    option(value=[1]) 1 TPC
+                    option(value=[1,1]) 2 TPCS
+                    option(value=[1,1,1]) 3 TPCS
+                    option(value=[1,1,1,1]) 4 TPCS
+                    option(value=[1,1,1,1,1]) 5 TPCS
+                    option(value=[1,1,1,1,1,1]) 6 TPCS
+                    option(value=[1,1,1,1,1,1,1]) 7 TPCS
+                    option(value=[1,1,1,1,1,1,1,1]) 8 TPCS
             div.actions
                 input(type="submit", value="Registar")

@@ -8,9 +8,13 @@ block content
             button(type="submit").w3-dark-gray.w3-xlarge Editar Aluno
           form(method="get" action="/alunos").w3-right
             button(type="submit").w3-dark-gray.w3-xlarge Voltar à lista de alunos
-          h2.w3-center= title 
-      //info do aluno nao esquecer tpc
-      p= aluno.Nome
+          h2.w3-center= title
+      img(src='/images/default-profile.png' , alt='Profile Picture' width="150px" height="150px").w3-right
+      h4 Nome: #{aluno.Nome}
+      h4 Número: #{aluno.Número}
+      h4 Git:
+        a(href=aluno.Git) #{aluno.Git.split('/')[3]}
+      h4 TPCS: O aluno fez #{aluno.tpc.length} tpcs
       header.w3.container.w3-green
           form(method="post" action="/alunos/" + aluno.Número).w3-red.w3-center
             button(type="submit").w3-black.w3-xlarge Eliminar Aluno

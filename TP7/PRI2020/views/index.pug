@@ -17,8 +17,9 @@ block content
                       tr
                           td= a.Número
                           td
-                            a(href='http://localhost:7777/alunos/' + a.Número) a.Nome
-                          td= a.Git
+                            a(href='http://localhost:7777/alunos/' + a.Número) #{a.Nome}
+                          td
+                            a(href=a.Git) #{a.Git}
       else
           .w3-container
               p Ainda nao há alunos necessários...

@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var fs = require('fs')
 
 const aluno = require('../controllers/aluno')
 
@@ -11,7 +12,7 @@ router.get('/alunos', function(req, res, next) {
 });
 
 router.post('/alunos', function (req, res) {
-  aluno.inserir({ Número: req.body.numero, Nome: req.body.nome, Git: req.body.git, tpc: [] })
+  aluno.inserir({ Número: req.body.numero, Nome: req.body.nome, Git: req.body.git, tpc: JSON.parse(req.body.quant)})
     .then(response => {
       aluno.listar()
         .then(dados => res.render('index', { lista: dados, title: 'Lista de Alunos' }))
@@ -40,7 +41,7 @@ router.get('/alunos/:id', function (req, res, next) {
 router.post('/alunos/:id', function (req, res, next) {
   var id = req.params.id
   if(req.body.nome != null){
-    aluno.update({ Número: id, Nome: req.body.nome, Git: req.body.git, tpc: [] })
+    aluno.update({ Número: id, Nome: req.body.nome, Git: req.body.git, tpc: JSON.parse(req.body.quant) })
       .then(response => {
         aluno.consultar(id)
           .then(aluno => res.render('aluno', { aluno: aluno, title: 'Detalhes de Aluno' }))

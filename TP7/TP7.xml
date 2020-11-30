@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "../../Random/PR.dtd">
+<PR>
+    <meta>
+        <key>PRI_TP7_ProjectRec</key>
+        <title>Project Record TP7 PRI</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85919">
+            <name>Pedro Dias Parente</name>
+            <email>a85919@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            O objetivo deste trabalho era fazer um server em <b>Node.js</b> que comunicasse com uma base de dados no <b>Mongo</b> e com a informação lá presente fosse capaz de gerar um site.
+        </p>
+        <p>
+			O site contém a informãção relativa aos alunos inscritos em PRI no ano 2020 e é capaz de: ver todos os alunos inscritos no momento, registar novos alunos na disciplina, editar alunos existentes, eliminar alunos e ver a informação relativa de cada aluno (Como por exemplo ver a quantidade de tpcs que fez ou visitar a página de github do aluno).
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="TP7.xml">
+            Report (XML)
+        </link>
+        <link url="PRI2020.json">
+            Ficheiro .json importado para o Mongo
+        </link>
+    </deliverables>
+</PR>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "../../Random/PR.dtd">
+<PR>
+    <meta>
+        <key>PRI_TP8_ProjectRec</key>
+        <title>Project Record TP8 PRI</title>
+        <bdate>Dezembro 2020</bdate>
+        <edate>Dezembro 2020</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85919">
+            <name>Pedro Dias Parente</name>
+            <email>a85919@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            O objetivo deste trabalho era fazer um server em <b>Node.js</b> que tratasse das respostas um site que permita fazer o upload de ficheiros. Estes ficheiros eram então depois guardados em public/fileStore e a sua meta-data era guardada dbFiles.json.
+        </p>
+        <p>
+			Ao ler a meta-data no ficheiro .json o site gerava uma lista dos ficheiros que foram uploaded e permitia então depois o seu download e, no caso de ser uma imagem, permitia ver a imagem no próprio site. O site também permite o upload de múltiplos ficheiros de uma vez.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="TP8.xml">
+            Report (XML)
+        </link>
+        <link url="dbFiles.json">
+            Ficheiro .json que serve como base de dados para toda a meta-data dos ficheiros uploaded
+        </link>
+        <link url="server.js">
+        	Código que trata de toda a configuração do servidor
+        </link>
+        <link url="html-templates.js">
+        	Código que trata de geração de html
+        </link>
+        <link url="public/imagens.js">
+        	Script JS que trata da aparição de imagem após o click no ficheiro
+        </link>
+        <link url="public/moreFiles.js">
+        	Script JS que trata de inserir um botão de upload no html existente
+        </link>
+    </deliverables>
+</PR>
